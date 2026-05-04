@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPD FIRM - Most Trusted Prop Firm 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0a0a0f',
+                            card: '#12121a',
+                            cardHover: '#1a1a25',
+                            green: '#00C853',
+                            greenLight: '#00ff88',
+                            greenDark: '#00a043',
+                            border: '#1e1e2e',
+                            muted: '#8a8a9a',
+                        }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Inter',sans-serif;background:#0a0a0f;color:#fff;overflow-x:hidden}
+        .stars-bg{position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(1px 1px at 50px 80px,rgba(255,255,255,.6),transparent),radial-gradient(1px 1px at 150px 30px,rgba(255,255,255,.4),transparent),radial-gradient(1px 1px at 250px 120px,rgba(255,255,255,.5),transparent),radial-gradient(1px 1px at 400px 200px,rgba(255,255,255,.3),transparent),radial-gradient(1px 1px at 80px 300px,rgba(255,255,255,.5),transparent),radial-gradient(1px 1px at 500px 50px,rgba(255,255,255,.4),transparent),radial-gradient(1px 1px at 350px 350px,rgba(255,255,255,.6),transparent),radial-gradient(1.5px 1.5px at 600px 150px,rgba(255,255,255,.5),transparent),radial-gradient(1px 1px at 700px 280px,rgba(255,255,255,.3),transparent),radial-gradient(1px 1px at 900px 100px,rgba(255,255,255,.4),transparent),radial-gradient(1px 1px at 1050px 220px,rgba(255,255,255,.5),transparent),radial-gradient(1px 1px at 1200px 60px,rgba(255,255,255,.3),transparent),radial-gradient(1.5px 1.5px at 1300px 300px,rgba(255,255,255,.6),transparent),radial-gradient(1px 1px at 200px 450px,rgba(255,255,255,.4),transparent),radial-gradient(1px 1px at 550px 400px,rgba(255,255,255,.5),transparent),radial-gradient(1px 1px at 800px 420px,rgba(255,255,255,.3),transparent),radial-gradient(1px 1px at 1100px 380px,rgba(255,255,255,.4),transparent);z-index:0;pointer-events:none}
+        .glow-green{box-shadow:0 0 40px rgba(0,200,83,.15),0 0 80px rgba(0,200,83,.05)}
+        .glow-green-strong{box-shadow:0 0 60px rgba(0,200,83,.3),0 0 120px rgba(0,200,83,.1)}
+        .text-glow{text-shadow:0 0 30px rgba(0,200,83,.4),0 0 60px rgba(0,200,83,.2)}
+        .gradient-border{position:relative;background:#12121a;border-radius:16px}
+        .gradient-border::before{content:'';position:absolute;inset:-1px;border-radius:17px;background:linear-gradient(135deg,rgba(0,200,83,.3),transparent 50%,rgba(0,200,83,.1));z-index:-1}
+        .meter-circle{stroke-dasharray:283;stroke-dashoffset:283;animation:fillMeter 2s ease-out forwards}
+        @keyframes fillMeter{to{stroke-dashoffset:85}}
+        @keyframes pulse-green{0%,100%{box-shadow:0 0 0 0 rgba(0,200,83,.4)}50%{box-shadow:0 0 0 10px rgba(0,200,83,0)}}
+        .pulse-green{animation:pulse-green 2s infinite}
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        .fade-in-up{animation:fadeInUp .8s ease-out forwards}
+        .fade-in-up-delay-1{animation:fadeInUp .8s ease-out .15s forwards;opacity:0}
+        .fade-in-up-delay-2{animation:fadeInUp .8s ease-out .3s forwards;opacity:0}
+        .fade-in-up-delay-3{animation:fadeInUp .8s ease-out .45s forwards;opacity:0}
+        ::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#0a0a0f}::-webkit-scrollbar-thumb{background:#1e1e2e;border-radius:3px}::-webkit-scrollbar-thumb:hover{background:#2a2a3a}
+        .chart-line{stroke-dasharray:1000;stroke-dashoffset:1000;animation:drawLine 2s ease-out forwards}
+        @keyframes drawLine{to{stroke-dashoffset:0}}
+        .brain-glow{filter:drop-shadow(0 0 40px rgba(0,200,83,.5)) drop-shadow(0 0 80px rgba(0,200,83,.2))}
+        .modal-overlay{backdrop-filter:blur(8px);background:rgba(0,0,0,.7)}
+        .popular-badge{background:linear-gradient(135deg,#00C853,#00a043)}
+        .compare-row:hover{background:rgba(0,200,83,.03)}
+        .nav-link{position:relative}.nav-link::after{transition:all .3s ease;width:0}
+        .nav-link:hover::after,.nav-link.active::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;background:#00C853;border-radius:1px;width:100%}
+        .card-hover{transition:all .3s ease}.card-hover:hover{transform:translateY(-4px);background:#1a1a25}
+        @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+        @keyframes slideInLeft{from{opacity:0;transform:translateX(-50px)}to{opacity:1;transform:translateX(0)}}
+        @keyframes slideInRight{from{opacity:0;transform:translateX(50px)}to{opacity:1;transform:translateX(0)}}
+        @keyframes scaleIn{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
+        @keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+        @keyframes glowPulse{0%,100%{filter:drop-shadow(0 0 20px rgba(0,200,83,.3))}50%{filter:drop-shadow(0 0 50px rgba(0,200,83,.7))}}
+        @keyframes ripple{0%{transform:scale(0);opacity:.5}100%{transform:scale(4);opacity:0}}
+        @keyframes borderGlow{0%,100%{border-color:rgba(0,200,83,.2)}50%{border-color:rgba(0,200,83,.6)}}
+        @keyframes textGlowPulse{0%,100%{text-shadow:0 0 20px rgba(0,200,83,.3),0 0 40px rgba(0,200,83,.1)}50%{text-shadow:0 0 40px rgba(0,200,83,.6),0 0 80px rgba(0,200,83,.3)}}
+        @keyframes iconBounce{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+        @keyframes slideDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+        .animate-on-scroll{opacity:0;transform:translateY(40px);transition:all .8s cubic-bezier(.16,1,.3,1)}
+        .animate-on-scroll.visible{opacity:1;transform:translateY(0)}
+        .animate-on-scroll.slide-left{transform:translateX(-50px) translateY(0)}.animate-on-scroll.slide-left.visible{transform:translateX(0) translateY(0)}
+        .animate-on-scroll.slide-right{transform:translateX(50px) translateY(0)}.animate-on-scroll.slide-right.visible{transform:translateX(0) translateY(0)}
+        .animate-on-scroll.scale-up{transform:scale(.85) translateY(0)}.animate-on-scroll.scale-up.visible{transform:scale(1) translateY(0)}
+        .stagger-child{opacity:0;transform:translateY(25px);transition:all .6s cubic-bezier(.16,1,.3,1)}.stagger-child.visible{opacity:1;transform:translateY(0)}
+        .float-animation{animation:float 3s ease-in-out infinite}
+        .glow-pulse-anim{animation:glowPulse 2.5s ease-in-out infinite}
+        .text-glow-pulse{animation:textGlowPulse 2s ease-in-out infinite}
+        .icon-bounce:hover i,.icon-bounce:hover svg{animation:iconBounce .5s ease}
+        .shimmer-btn{position:relative;overflow:hidden}.shimmer-btn::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);animation:shimmer 2.5s infinite}
+        .ripple-container{position:relative;overflow:hidden}.ripple-container .ripple-effect{position:absolute;border-radius:50%;background:rgba(0,200,83,.3);animation:ripple .7s linear forwards;pointer-events:none}
+        .animated-border-glow{animation:borderGlow 2s ease-in-out infinite}
+        .particle{position:absolute;border-radius:50%;pointer-events:none}
+        .particle-float{animation:float var(--dur,4s) ease-in-out infinite;animation-delay:var(--delay,0s)}
+        .magnetic-btn{transition:transform .3s cubic-bezier(.16,1,.3,1)}
+        .card-hover i,.card-hover svg{transition:transform .3s ease}.card-hover:hover i,.card-hover:hover svg{transform:scale(1.1) rotate(-5deg)}
+        .compare-row{transition:all .3s ease}.compare-row:hover .w-7.h-7{transform:scale(1.2);transition:transform .3s ease}
+        .plan-amount,.step-btn{transition:all .3s cubic-bezier(.16,1,.3,1)}.plan-amount:active,.step-btn:active{transform:scale(.95)}
+        @keyframes modalIn{from{opacity:0;transform:scale(.9) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}
+        .modal-animate{animation:modalIn .4s cubic-bezier(.16,1,.3,1) forwards}
+        @keyframes counterUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+        .counter-animate{animation:counterUp .4s ease-out forwards}
+        .banner-slide{animation:slideDown .5s ease-out}
+        .faq-answer{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.16,1,.3,1),padding .3s ease}
+        .faq-answer.open{max-height:500px}
+        .faq-chevron{transition:transform .3s ease}.faq-chevron.open{transform:rotate(180deg)}
+        .input-field{transition:all .3s ease;border:1px solid #1e1e2e}.input-field:focus{border-color:#00C853;box-shadow:0 0 0 3px rgba(0,200,83,.1);outline:none}
+        .login-tab{transition:all .3s ease}.login-tab.active{background:rgba(0,200,83,.1);color:#00C853;border-color:#00C853}
+        .funded-step{transition:all .5s cubic-bezier(.16,1,.3,1)}.funded-step.active .funded-step-num{background:#00C853;color:#0a0a0f;box-shadow:0 0 20px rgba(0,200,83,.4)}
+        .funded-step-line{transition:background .5s ease}.funded-step-line.active{background:#00C853}
+        .funded-panel{display:none;animation:fadeInUp .4s ease-out forwards}.funded-panel.active{display:block}
+        .toast{animation:slideDown .4s ease-out, fadeInUp .4s ease-out reverse 2.6s forwards}
+    </style>
+</head>
+<body>
+    <div class="stars-bg"></div>
+
+    <!-- Update Banner -->
+    <div class="relative z-50 bg-gradient-to-r from-brand-green/90 to-brand-greenDark/90 text-white text-center py-2.5 px-4 text-sm font-medium banner-slide">
+        <span class="inline-flex items-center gap-2">
+            <i data-lucide="zap" class="w-4 h-4"></i>
+            Update 2.0: $20M+ Payouts — UPI Payments Now Live!
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="relative z-40 sticky top-0 bg-brand-dark/80 backdrop-blur-xl border-b border-brand-border/50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3 icon-bounce cursor-pointer">
+                <div class="w-9 h-9 rounded-lg bg-brand-green flex items-center justify-center"><i data-lucide="trending-up" class="w-5 h-5 text-brand-dark"></i></div>
+                <span class="text-xl font-bold tracking-tight">NPD <span class="text-brand-green">FIRM</span></span>
+            </div>
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="#home" class="nav-link active text-sm font-medium text-white hover:text-brand-green transition-colors">Home</a>
+                <a href="#challenges" class="nav-link text-sm font-medium text-brand-muted hover:text-white transition-colors">Funded Account Challenges</a>
+                <a href="#compare" class="nav-link text-sm font-medium text-brand-muted hover:text-white transition-colors">Compare</a>
+                <a href="#trading-rules" class="nav-link text-sm font-medium text-brand-muted hover:text-white transition-colors">Trading Rules</a>
+                <a href="#faq" class="nav-link text-sm font-medium text-brand-muted hover:text-white transition-colors">FAQ</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <button onclick="showLoginModal()" class="hidden sm:inline-flex px-5 py-2.5 text-sm font-medium text-brand-muted border border-brand-border rounded-xl hover:border-brand-green/50 hover:text-white transition-all magnetic-btn">Login</button>
+                <button onclick="showGetFundedModal()" class="px-5 py-2.5 text-sm font-semibold text-brand-dark bg-brand-green rounded-xl hover:bg-brand-greenLight transition-all pulse-green shimmer-btn magnetic-btn">Get Funded</button>
+                <button class="lg:hidden p-2 text-brand-muted hover:text-white" onclick="toggleMobileMenu()"><i data-lucide="menu" class="w-5 h-5"></i></button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-brand-border/50 bg-brand-dark/95 backdrop-blur-xl">
+            <div class="px-6 py-4 flex flex-col gap-3">
+                <a href="#home" class="text-sm font-medium text-white py-2">Home</a>
+                <a href="#challenges" class="text-sm font-medium text-brand-muted py-2">Funded Account Challenges</a>
+                <a href="#compare" class="text-sm font-medium text-brand-muted py-2">Compare</a>
+                <a href="#trading-rules" class="text-sm font-medium text-brand-muted py-2">Trading Rules</a>
+                <a href="#faq" class="text-sm font-medium text-brand-muted py-2">FAQ</a>
+                <button onclick="showLoginModal()" class="text-sm font-medium text-brand-muted py-2 text-left">Login</button>
+                <button onclick="showGetFundedModal()" class="text-sm font-medium text-brand-green py-2 text-left">Get Funded</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative z-10 pt-16 pb-20 lg:pt-24 lg:pb-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-6 lg:gap-12 mb-12 fade-in-up">
+                <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-brand-green animate-pulse"></div><span class="text-sm text-brand-muted">Profit Split Upto:</span><span class="text-sm font-bold text-brand-green" data-count="100" data-suffix="%">0%</span></div>
+                <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-brand-green animate-pulse"></div><span class="text-sm text-brand-muted">News Trading:</span><span class="text-sm font-bold text-brand-green">Enabled</span></div>
+                <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-brand-green animate-pulse"></div><span class="text-sm text-brand-muted">Reward Cycle:</span><span class="text-sm font-bold text-brand-green">Monthly / Biweekly / Weekly</span></div>
+            </div>
+            <div class="text-center max-w-4xl mx-auto mb-12">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6 fade-in-up">Trade with the Most<br><span class="text-brand-green text-glow-pulse">Trusted Prop Firm</span></h1>
+                <p class="text-lg lg:text-xl text-brand-muted max-w-2xl mx-auto leading-relaxed fade-in-up-delay-1">Get Funded Up to $100K & Withdraw Your Profits in 24 Hours. <span class="text-white font-semibold">$20 Million</span> Paid Out to Real Traders.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-4 mb-16 fade-in-up-delay-2">
+                <button onclick="showGetFundedModal()" class="px-8 py-3.5 text-sm font-semibold text-brand-dark bg-brand-green rounded-xl hover:bg-brand-greenLight transition-all glow-green shimmer-btn magnetic-btn ripple-container inline-flex items-center gap-2">Buy Challenge<i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                <button class="px-8 py-3.5 text-sm font-semibold text-white border border-brand-border rounded-xl hover:border-brand-green/50 transition-all magnetic-btn ripple-container inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>Telegram</button>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto fade-in-up-delay-3">
+                <div class="gradient-border p-6 lg:p-8 card-hover cursor-pointer icon-bounce"><div class="flex items-start gap-4"><div class="w-12 h-12 rounded-xl bg-brand-green/10 flex items-center justify-center flex-shrink-0"><i data-lucide="shield-check" class="w-6 h-6 text-brand-green"></i></div><div><h3 class="text-lg font-bold mb-2">Guaranteed Payouts</h3><p class="text-sm text-brand-muted leading-relaxed">No max/min evaluation days. Get your payouts within 24 hours with zero denial.</p></div></div></div>
+                <div class="gradient-border p-6 lg:p-8 card-hover cursor-pointer icon-bounce"><div class="flex items-start gap-4"><div class="w-12 h-12 rounded-xl bg-brand-green/10 flex items-center justify-center flex-shrink-0"><i data-lucide="monitor" class="w-6 h-6 text-brand-green"></i></div><div><h3 class="text-lg font-bold mb-2">Trade Smarter On MT5</h3><p class="text-sm text-brand-muted leading-relaxed">Use the industry-leading MetaTrader 5 platform with advanced tools and low latency.</p></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUSTED SECTION -->
+    <section class="relative z-10 py-20 lg:py-28">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll"><span class="inline-block px-4 py-1.5 bg-brand-green/10 text-brand-green text-xs font-semibold rounded-full uppercase tracking-wider mb-4">Trusted Prop Firm</span><h2 class="text-3xl lg:text-4xl font-extrabold tracking-tight mb-4">Most Trusted Prop Firm <span class="text-brand-green text-glow-pulse">2025</span></h2><p class="text-brand-muted max-w-2xl mx-auto">Zero Payout Denial. We provide a professional ecosystem for skilled traders to thrive and grow.</p></div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" data-stagger="120">
+                <div class="gradient-border p-6 card-hover cursor-pointer icon-bounce"><div class="w-12 h-12 rounded-xl bg-brand-green/10 flex items-center justify-center mb-4"><i data-lucide="lock" class="w-6 h-6 text-brand-green"></i></div><h3 class="text-base font-bold mb-2">Safe & Secure</h3><p class="text-sm text-brand-muted leading-relaxed">Low spreads, zero commission trading with full capital protection.</p></div>
+                <div class="gradient-border p-6 card-hover cursor-pointer icon-bounce"><div class="w-12 h-12 rounded-xl bg-brand-green/10 flex items-center justify-center mb-4"><i data-lucide="bar-chart-3" class="w-6 h-6 text-brand-green"></i></div><h3 class="text-base font-bold mb-2">Trade on MT5</h3><p class="text-sm text-brand-muted leading-relaxed">Access MetaTrader 5 with all indicators, EAs and advanced charting.</p></div>
+                <div class="gradient-border p-6 card-hover cursor-pointer icon-bounce"><div class="w-12 h-12 rounded-xl bg-brand-green/10 flex items-center justify-center mb-4"><i data-lucide="newspaper" class="w-6 h-6 text-brand-green"></i></div><h3 class="text-base font-bold mb-2">News Trading</h3><p class="text-sm text-brand-muted leading-relaxed">Trade during news events without restrictions — no limitations.</p></div>
+                <div class="gradient-border p-6 card-hover cursor-pointer icon-bounce"><div class="w-12 h-12 rounded-xl bg-brand-green/10 flex items-center justify-center mb-4"><i data-lucide="clock" class="w-6 h-6 text-brand-green"></i></div><h3 class="text-base font-bold mb-2">Fast Payouts</h3><p class="text-sm text-brand-muted leading-relaxed">24-hour withdrawal processing with bank transfers & UPI support.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRAIN / CTA SECTION -->
+    <section class="relative z-10 py-20 lg:py-28">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="gradient-border p-8 lg:p-16 flex flex-col lg:flex-row items-center gap-12 overflow-hidden relative animated-border-glow">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-green/5 rounded-full blur-[100px] pointer-events:none"></div>
+                <div class="flex-1 text-center lg:text-left relative z-10 animate-on-scroll slide-left">
+                    <span class="inline-block px-4 py-1.5 bg-brand-green/10 text-brand-green text-xs font-semibold rounded-full uppercase tracking-wider mb-6">Featured</span>
+                    <h2 class="text-3xl lg:text-5xl font-extrabold tracking-tight mb-4 leading-tight">NPDFirm:<br><span class="text-brand-green text-glow-pulse">Most Trusted Firm</span></h2>
+                    <p class="text-brand-muted text-lg leading-relaxed mb-8 max-w-lg">Get Funded Up to $100K & Withdraw Your Profits in 24 Hours. <span class="text-white font-semibold">$20 Million</span> Paid Out to Real Traders.</p>
+                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                        <button onclick="showGetFundedModal()" class="px-8 py-3.5 text-sm font-semibold text-brand-dark bg-brand-green rounded-xl hover:bg-brand-greenLight transition-all glow-green shimmer-btn magnetic-btn ripple-container inline-flex items-center gap-2">Buy Challenge<i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                        <button class="px-8 py-3.5 text-sm font-semibold text-white border border-brand-border rounded-xl hover:border-brand-green/50 transition-all magnetic-btn ripple-container inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>Telegram</button>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 relative z-10 animate-on-scroll slide-right scale-up" id="brainWrapper">
+                    <svg class="w-64 h-64 lg:w-80 lg:h-80 brain-glow glow-pulse-anim" viewBox="0 0 200 200" fill="none" id="brainSvg">
+                        <ellipse cx="100" cy="100" rx="65" ry="72" stroke="url(#brainGrad)" stroke-width="1.5" fill="none" opacity="0.6"/>
+                        <path d="M100 28 C65 28 40 55 38 85 C36 100 42 115 52 125" stroke="url(#brainGrad)" stroke-width="1.5" fill="none"/>
+                        <path d="M100 28 C135 28 160 55 162 85 C164 100 158 115 148 125" stroke="url(#brainGrad)" stroke-width="1.5" fill="none"/>
+                        <path d="M52 125 C45 135 48 155 60 162 C70 168 85 165 95 158" stroke="url(#brainGrad)" stroke-width="1.5" fill="none"/>
+                        <path d="M148 125 C155 135 152 155 140 162 C130 168 115 165 105 158" stroke="url(#brainGrad)" stroke-width="1.5" fill="none"/>
+                        <path d="M95 158 L100 172 L105 158" stroke="url(#brainGrad)" stroke-width="1.5" fill="none"/>
+                        <path d="M65 65 C75 55 90 58 100 65" stroke="url(#brainGrad)" stroke-width="1" fill="none" opacity="0.4"/>
+                        <path d="M100 65 C110 58 125 55 135 65" stroke="url(#brainGrad)" stroke-width="1" fill="none" opacity="0.4"/>
+                        <path d="M55 90 C70 82 85 85 100 90" stroke="url(#brainGrad)" stroke-width="1" fill="none" opacity="0.4"/>
+                        <path d="M100 90 C115 85 130 82 145 90" stroke="url(#brainGrad)" stroke-width="1" fill="none" opacity="0.4"/>
+                        <path d="M60 115 C75 108 88 112 100 118" stroke="url(#brainGrad)" stroke-width="1" fill="none" opacity="0.4"/>
+                        <path d="M100 118 C112 112 125 108 140 115" stroke="url(#brainGrad)" stroke-width="1" fill="none" opacity="0.4"/>
+                        <path d="M75 140 C82 132 92 135 100 140" stroke="url(#brainGrad)" stroke-width="1" fill="none" opacity="0.4"/>
+                        <path d="M100 140 C108 135 118 132 125 140" stroke="url(#brainGrad)" stroke-width="1" fill="none" opacity="0.4"/>
+                        <line x1="100" y1="35" x2="100" y2="168" stroke="url(#brainGrad)" stroke-width="0.8" opacity="0.3"/>
+                        <circle cx="100" cy="65" r="4" fill="#00C853" opacity="0.8"><animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/></circle>
+                        <circle cx="75" cy="90" r="3" fill="#00C853" opacity="0.6"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="2.5s" repeatCount="indefinite"/></circle>
+                        <circle cx="125" cy="90" r="3" fill="#00C853" opacity="0.6"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="2.5s" repeatCount="indefinite" begin="0.5s"/></circle>
+                        <circle cx="100" cy="118" r="4" fill="#00C853" opacity="0.8"><animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="1s"/></circle>
+                        <circle cx="100" cy="140" r="3" fill="#00C853" opacity="0.6"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.8s" repeatCount="indefinite" begin="0.3s"/></circle>
+                        <circle cx="60" cy="75" r="2.5" fill="#00ff88" opacity="0.5"><animate attributeName="opacity" values="0.2;0.7;0.2" dur="3s" repeatCount="indefinite"/></circle>
+                        <circle cx="140" cy="75" r="2.5" fill="#00ff88" opacity="0.5"><animate attributeName="opacity" values="0.2;0.7;0.2" dur="3s" repeatCount="indefinite" begin="1s"/></circle>
+                        <circle cx="85" cy="150" r="2" fill="#00ff88" opacity="0.4"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.2s" repeatCount="indefinite" begin="0.7s"/></circle>
+                        <circle cx="115" cy="150" r="2" fill="#00ff88" opacity="0.4"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.2s" repeatCount="indefinite" begin="1.3s"/></circle>
+                        <defs><linearGradient id="brainGrad" x1="40" y1="28" x2="160" y2="172" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#00C853"/><stop offset="50%" stop-color="#00ff88"/><stop offset="100%" stop-color="#00C853"/></linearGradient></defs>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHALLENGES SECTION -->
+    <section id="challenges" class="relative z-10 py-20 lg:py-28">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12 animate-on-scroll"><h2 class="text-3xl lg:text-4xl font-extrabold tracking-tight mb-4">Funded Account <span class="text-brand-green text-glow-pulse">Challenges</span></h2><p class="text-brand-muted max-w-xl mx-auto">Choose your funding level and start trading with our capital.</p></div>
+            <div class="flex flex-wrap justify-center gap-3 mb-10 animate-on-scroll">
+                <button class="plan-amount px-6 py-3 rounded-xl text-sm font-semibold border border-brand-border bg-brand-card hover:border-brand-green/30 transition-all ripple-container" data-amount="5000">$5K</button>
+                <button class="plan-amount px-6 py-3 rounded-xl text-sm font-semibold border border-brand-border bg-brand-card hover:border-brand-green/30 transition-all ripple-container" data-amount="10000">$10K</button>
+                <button class="plan-amount px-6 py-3 rounded-xl text-sm font-semibold border border-brand-border bg-brand-card hover:border-brand-green/30 transition-all ripple-container" data-amount="25000">$25K</button>
+                <button class="plan-amount px-6 py-3 rounded-xl text-sm font-semibold border border-brand-border bg-brand-card hover:border-brand-green/30 transition-all ripple-container" data-amount="50000">$50K</button>
+                <button class="plan-amount px-6 py-3 rounded-xl text-sm font-semibold border-2 border-brand-green bg-brand-green/10 text-brand-green transition-all relative ripple-container" data-amount="100000">$100K<span class="absolute -top-3 left-1/2 -translate-x-1/2 popular-badge text-[10px] font-bold text-white px-3 py-0.5 rounded-full uppercase">Most Popular</span></button>
+            </div>
+            <div class="flex justify-center gap-4 mb-10 animate-on-scroll">
+                <button class="step-btn px-6 py-2.5 rounded-xl text-sm font-semibold border-2 border-brand-green bg-brand-green/10 text-brand-green ripple-container" data-step="1">1 Step</button>
+                <button class="step-btn px-6 py-2.5 rounded-xl text-sm font-semibold border border-brand-border text-brand-muted hover:border-brand-green/30 transition-all ripple-container" data-step="2">2 Step</button>
+            </div>
+            <div class="max-w-2xl mx-auto animate-on-scroll scale-up">
+                <div class="gradient-border p-8 lg:p-10 glow-green animated-border-glow">
+                    <div class="flex items-center justify-between mb-6"><div><span class="text-xs font-semibold text-brand-green uppercase tracking-wider">1 Step Plan</span><h3 class="text-2xl font-bold mt-1" id="planAmountTitle">$100,000</h3></div><div class="text-right"><span class="text-sm text-brand-muted line-through" id="planOriginalPrice">$649</span><div class="text-3xl font-extrabold text-brand-green" id="planPrice">$549</div></div></div>
+                    <div class="flex flex-wrap gap-2 mb-8"><span class="px-3 py-1 bg-brand-green/10 text-brand-green text-xs font-semibold rounded-lg">Swap Free</span><span class="px-3 py-1 bg-brand-green/10 text-brand-green text-xs font-semibold rounded-lg">Commission Free</span><span class="px-3 py-1 bg-brand-green/10 text-brand-green text-xs font-semibold rounded-lg">News Trading</span></div>
+                    <div class="grid grid-cols-2 gap-4 mb-8" data-stagger="100">
+                        <div class="bg-brand-dark/50 rounded-xl p-4 border border-brand-border/50"><div class="text-xs text-brand-muted mb-1">Target Profit</div><div class="text-xl font-bold text-brand-green" data-count="10" data-suffix="%">0%</div></div>
+                        <div class="bg-brand-dark/50 rounded-xl p-4 border border-brand-border/50"><div class="text-xs text-brand-muted mb-1">Daily Loss Limit</div><div class="text-xl font-bold text-yellow-400" data-count="3" data-suffix="%">0%</div></div>
+                        <div class="bg-brand-dark/50 rounded-xl p-4 border border-brand-border/50"><div class="text-xs text-brand-muted mb-1">Max Overall Loss</div><div class="text-xl font-bold text-red-400" data-count="6" data-suffix="%">0%</div></div>
+                        <div class="bg-brand-dark/50 rounded-xl p-4 border border-brand-border/50"><div class="text-xs text-brand-muted mb-1">Min Trading Days</div><div class="text-xl font-bold text-white" data-count="3" data-suffix=" Days">0 Days</div></div>
+                    </div>
+                    <div class="flex items-center gap-2 mb-6 text-sm text-yellow-400"><i data-lucide="clock" class="w-4 h-4"></i><span class="font-medium">Limited time offer — Price increases soon!</span></div>
+                    <button onclick="showAccountModal()" class="w-full py-4 text-sm font-bold text-brand-dark bg-brand-green rounded-xl hover:bg-brand-greenLight transition-all glow-green-strong shimmer-btn magnetic-btn ripple-container flex items-center justify-center gap-2">Buy Plan<i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                </div>
+            </div>
+            <div class="text-center mt-6"><button class="text-sm text-brand-muted hover:text-brand-green transition-colors inline-flex items-center gap-1 icon-bounce">Need Help?<i data-lucide="help-circle" class="w-4 h-4"></i></button></div>
+        </div>
+    </section>
+
+    <!-- COMPARISON SECTION -->
+    <section id="compare" class="relative z-10 py-20 lg:py-28">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12 animate-on-scroll"><h2 class="text-3xl lg:text-4xl font-extrabold tracking-tight mb-4">How does <span class="text-brand-green text-glow-pulse">NPD FIRM</span><br>compare with other companies?</h2></div>
+            <div class="gradient-border overflow-hidden animate-on-scroll scale-up">
+                <div class="grid grid-cols-3 bg-brand-card border-b border-brand-border"><div class="p-4 lg:p-5 text-sm font-semibold text-brand-muted">Feature</div><div class="p-4 lg:p-5 text-sm font-bold text-brand-green text-center border-l border-brand-border bg-brand-green/5">NPDFirm</div><div class="p-4 lg:p-5 text-sm font-bold text-brand-muted text-center border-l border-brand-border">Others</div></div>
+                <div class="compare-row grid grid-cols-3 border-b border-brand-border/50 transition-colors"><div class="p-4 lg:p-5 text-sm text-brand-muted">MT5 Trading Platform</div><div class="p-4 lg:p-5 flex justify-center border-l border-brand-border bg-brand-green/5"><div class="w-7 h-7 rounded-full bg-brand-green/20 flex items-center justify-center"><i data-lucide="check" class="w-4 h-4 text-brand-green"></i></div></div><div class="p-4 lg:p-5 flex justify-center border-l border-brand-border"><div class="w-7 h-7 rounded-full bg-red-500/20 flex items-center justify-center"><i data-lucide="x" class="w-4 h-4 text-red-400"></i></div></div></div>
+                <div class="compare-row grid grid-cols-3 border-b border-brand-border/50 transition-colors"><div class="p-4 lg:p-5 text-sm text-brand-muted">Bank Payouts</div><div class="p-4 lg:p-5 flex justify-center border-l border-brand-border bg-brand-green/5"><div class="w-7 h-7 rounded-full bg-brand-green/20 flex items-center justify-center"><i data-lucide="check" class="w-4 h-4 text-brand-green"></i></div></div><div class="p-4 lg:p-5 flex justify-center border-l border-brand-border"><div class="w-7 h-7 rounded-full bg-red-500/20 flex items-center justify-center"><i data-lucide="x" class="w-4 h-4 text-red-400"></i></div></div></div>
+                <div class="compare-row grid grid-cols-3 border-b border-brand-border/50 transition-colors"><div class="p-4 lg:p-5 text-sm text-brand-muted">UPI Payments</div><div class="p-4 lg:p-5 flex justify-center border-l border-brand-border bg-brand-green/5"><div class="w-7 h-7 rounded-full bg-brand-green/20 flex items-center justify-center"><i data-lucide="check" class="w-4 h-4 text-brand-green"></i></div></div><div class="p-4 lg:p-5 flex justify-center border-l border-brand-border"><div class="w-7 h-7 rounded-full bg-red-500/20 flex items-center justify-center"><i data-lucide="x" class="w-4 h-4 text-red-400"></i></div></div></div>
+                <div class="compare-row grid grid-cols-3 border-b border-brand-border/50 transition-colors"><div class="p-4 lg:p-5 text-sm text-brand-muted">News Trading</div><div class="p-4 lg:p-5 flex justify-center border-l border-brand-border bg-brand-green/5"><div class="w-7 h-7 rounded-full bg-brand-green/20 flex items-center justify-center"><i data-lucide="check" class="w-4 h-4 text-brand-green"></i></div></div><div class="p-4 lg:p-5 flex justify-center border-l border-brand-border"><div class="w-7 h-7 rounded-full bg-red-500/20 flex items-center justify-center"><i data-lucide="x" class="w-4 h-4 text-red-400"></i></div></div></div>
+                <div class="compare-row grid grid-cols-3 border-b border-brand-border/50 transition-colors"><div class="p-4 lg:p-5 text-sm text-brand-muted">Swap Free</div><div class="p-4 lg:p-5 flex justify-center border-l border-brand-border bg-brand-green/5"><div class="w-7 h-7 rounded-full bg-brand-green/20 flex items-center justify-center"><i data-lucide="check" class="w-4 h-4 text-brand-green"></i></div></div><div class="p-4 lg:p-5 flex justify-center border-l border-brand-border"><div class="w-7 h-7 rounded-full bg-red-500/20 flex items-center justify-center"><i data-lucide="x" class="w-4 h-4 text-red-400"></i></div></div></div>
+                <div class="compare-row grid grid-cols-3 border-b border-brand-border/50 transition-colors"><div class="p-4 lg:p-5 text-sm text-brand-muted">Commission Free</div><div class="p-4 lg:p-5 flex justify-center border-l border-brand-border bg-brand-green/5"><div class="w-7 h-7 rounded-full bg-brand-green/20 flex items-center justify-center"><i data-lucide="check" class="w-4 h-4 text-brand-green"></i></div></div><div class="p-4 lg:p-5 flex justify-center border-l border-brand-border"><div class="w-7 h-7 rounded-full bg-red-500/20 flex items-center justify-center"><i data-lucide="x" class="w-4 h-4 text-red-400"></i></div></div></div>
+                <div class="compare-row grid grid-cols-3 border-b border-brand-border/50 transition-colors"><div class="p-4 lg:p-5 text-sm text-brand-muted">24 Hour Payouts</div><div class="p-4 lg:p-5 flex justify-center border-l border-brand-border bg-brand-green/5"><div class="w-7 h-7 rounded-full bg-brand-green/20 flex items-center justify-center"><i data-lucide="check" class="w-4 h-4 text-brand-green"></i></div></div><div class="p-4 lg:p-5 flex justify-center border-l border-brand-border"><div class="w-7 h-7 rounded-full bg-red-500/20 flex items-center justify-center"><i data-lucide="x" class="w-4 h-4 text-red-400"></i></div></div></div>
+                <div class="compare-row grid grid-cols-3 transition-colors"><div class="p-4 lg:p-5 text-sm text-brand-muted">Zero Payout Denial</div><div class="p-4 lg:p-5 flex justify-center border-l border-brand-border bg-brand-green/5"><div class="w-7 h-7 rounded-full bg-brand-green/20 flex items-center justify-center"><i data-lucide="check" class="w-4 h-4 text-brand-green"></i></div></div><div class="p-4 lg:p-5 flex justify-center border-l border-brand-border"><div class="w-7 h-7 rounded-full bg-red-500/20 flex items-center justify-center"><i data-lucide="x" class="w-4 h-4 text-red-400"></i></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TRADING RULES SECTION ===== -->
+    <section id="trading-rules" class="relative z-10 py-20 lg:py-28">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="inline-block px-4 py-1.5 bg-brand-green/10 text-brand-green text-xs font-semibold rounded-full uppercase tracking-wider mb-4">Rules</span>
+                <h2 class="text-3xl lg:text-4xl font-extrabold tracking-tight mb-4">Trading <span class="text-brand-green text-glow-pulse">Rules</span></h2>
+                <p class="text-brand-muted max-w-xl mx-auto">Please read our trading rules carefully before starting your challenge.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6" data-stagger="100">
+                <div class="gradient-border p-6 card-hover icon-bounce">
+                    <div class="w-12 h-12 rounded-xl bg-brand-green/10 flex items-center justify-center mb-4"><i data-lucide="target" class="w-6 h-6 text-brand-green"></i></div>
+                    <h3 class="text-base font-bold mb-2">Profit Target</h3>
+                    <p class="text-sm text-brand-muted leading-relaxed">1 Step: 10% profit target. 2 Step: 8% (Phase 1) + 5% (Phase 2). Must reach target to pass evaluation.</p>
+                </div>
+                <div class="gradient-border p-6 card-hover icon-bounce">
+                    <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mb-4"><i data-lucide="alert-triangle" class="w-6 h-6 text-red-400"></i></div>
+                    <h3 class="text-base font-bold mb-2">Daily Loss Limit</h3>
+                    <p class="text-sm text-brand-muted leading-relaxed">Maximum 3% daily loss based on initial balance. If exceeded at any point during the day, account is breached.</p>
+                </div>
+                <div class="gradient-border p-6 card-hover icon-bounce">
+                    <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mb-4"><i data-lucide="shield-alert" class="w-6 h-6 text-red-400"></i></div>
+                    <h3 class="text-base font-bold mb-2">Max Overall Loss</h3>
+                    <p class="text-sm text-brand-muted leading-relaxed">Maximum 6% overall loss from initial balance. Account is terminated if this limit is exceeded at any time.</p>
+                </div>
+                <div class="gradient-border p-6 card-hover icon-bounce">
+                    <div class="w-12 h-12 rounded-xl bg-yellow-400/10 flex items-center justify-center mb-4"><i data-lucide="calendar-days" class="w-6 h-6 text-yellow-400"></i></div>
+                    <h3 class="text-base font-bold mb-2">Minimum Trading Days</h3>
+                    <p class="text-sm text-brand-muted leading-relaxed">1 Step: Minimum 3 trading days. 2 Step: Minimum 5 trading days per phase. At least one trade must be placed.</p>
+                </div>
+                <div class="gradient-border p-6 card-hover icon-bounce">
+                    <div class="w-12 h-12 rounded-xl bg-brand-green/10 flex items-center justify-center mb-4"><i data-lucide="newspaper" class="w-6 h-6 text-brand-green"></i></div>
+                    <h3 class="text-base font-bold mb-2">News Trading</h3>
+                    <p class="text-sm text-brand-muted leading-relaxed">News trading is fully allowed. Trade before, during, and after high-impact news events without any restrictions.</p>
+                </div>
+                <div class="gradient-border p-6 card-hover icon-bounce">
+                    <div class="w-12 h-12 rounded-xl bg-brand-green/10 flex items-center justify-center mb-4"><i data-lucide="clock" class="w-6 h-6 text-brand-green"></i></div>
+                    <h3 class="text-base font-bold mb-2">Overnight Holding</h3>
+                    <p class="text-sm text-brand-muted leading-relaxed">Overnight holding is allowed. Keep positions open over the weekend or news events as per your strategy.</p>
+                </div>
+                <div class="gradient-border p-6 card-hover icon-bounce">
+                    <div class="w-12 h-12 rounded-xl bg-brand-green/10 flex items-center justify-center mb-4"><i data-lucide="repeat" class="w-6 h-6 text-brand-green"></i></div>
+                    <h3 class="text-base font-bold mb-2">Unlimited Retakes</h3>
+                    <p class="text-sm text-brand-muted leading-relaxed">Failed your challenge? No worries — get free retakes on your 1-step plan. We believe in giving second chances.</p>
+                </div>
+                <div class="gradient-border p-6 card-hover icon-bounce">
+                    <div class="w-12 h-12 rounded-xl bg-brand-green/10 flex items-center justify-center mb-4"><i data-lucide="ban" class="w-6 h-6 text-brand-green"></i></div>
+                    <h3 class="text-base font-bold mb-2">Prohibited Strategies</h3>
+                    <p class="text-sm text-brand-muted leading-relaxed">Martingale, grid trading without SL, latency arbitrage, tick scalping, and HFT exploiting feed errors are prohibited.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ SECTION ===== -->
+    <section id="faq" class="relative z-10 py-20 lg:py-28">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="inline-block px-4 py-1.5 bg-brand-green/10 text-brand-green text-xs font-semibold rounded-full uppercase tracking-wider mb-4">Support</span>
+                <h2 class="text-3xl lg:text-4xl font-extrabold tracking-tight mb-4">Frequently Asked <span class="text-brand-green text-glow-pulse">Questions</span></h2>
+                <p class="text-brand-muted max-w-xl mx-auto">Everything you need to know about NPD Firm.</p>
+            </div>
+            <div class="space-y-3 animate-on-scroll" data-stagger="60">
+                <div class="gradient-border overflow-hidden">
+                    <button class="faq-toggle w-full p-5 flex items-center justify-between text-left" onclick="toggleFaq(this)">
+                        <span class="text-sm font-semibold pr-4">What is NPD Firm and how does it work?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-brand-green flex-shrink-0 faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-0"><p class="text-sm text-brand-muted leading-relaxed pb-5">NPD Firm is a proprietary trading firm that provides funded accounts to skilled traders. You pass an evaluation challenge, and once approved, you trade our capital and keep up to 100% of the profits. We handle the risk, you focus on trading.</p></div>
+                </div>
+                <div class="gradient-border overflow-hidden">
+                    <button class="faq-toggle w-full p-5 flex items-center justify-between text-left" onclick="toggleFaq(this)">
+                        <span class="text-sm font-semibold pr-4">How fast are payouts processed?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-brand-green flex-shrink-0 faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-0"><p class="text-sm text-brand-muted leading-relaxed pb-5">Payouts are processed within 24 hours of your withdrawal request. We support bank transfers, UPI, and other popular payment methods. There's zero payout denial — if you followed the rules, you get paid.</p></div>
+                </div>
+                <div class="gradient-border overflow-hidden">
+                    <button class="faq-toggle w-full p-5 flex items-center justify-between text-left" onclick="toggleFaq(this)">
+                        <span class="text-sm font-semibold pr-4">What platforms can I trade on?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-brand-green flex-shrink-0 faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-0"><p class="text-sm text-brand-muted leading-relaxed pb-5">All NPD Firm accounts are on MetaTrader 5 (MT5). You can use all MT5 features including EAs, indicators, custom scripts, and all available trading instruments (forex, indices, commodities, crypto).</p></div>
+                </div>
+                <div class="gradient-border overflow-hidden">
+                    <button class="faq-toggle w-full p-5 flex items-center justify-between text-left" onclick="toggleFaq(this)">
+                        <span class="text-sm font-semibold pr-4">Is news trading allowed?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-brand-green flex-shrink-0 faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-0"><p class="text-sm text-brand-muted leading-relaxed pb-5">Yes! News trading is fully allowed. Unlike other prop firms, we don't restrict trading around high-impact news events. You can open, close, or hold positions during news as per your strategy.</p></div>
+                </div>
+                <div class="gradient-border overflow-hidden">
+                    <button class="faq-toggle w-full p-5 flex items-center justify-between text-left" onclick="toggleFaq(this)">
+                        <span class="text-sm font-semibold pr-4">What happens if I breach the daily loss limit?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-brand-green flex-shrink-0 faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-0"><p class="text-sm text-brand-muted leading-relaxed pb-5">If you exceed the 3% daily loss limit or 6% max overall loss, the account is considered breached and cannot be recovered. For 1-step plans, you may be eligible for a free retake depending on your plan terms.</p></div>
+                </div>
+                <div class="gradient-border overflow-hidden">
+                    <button class="faq-toggle w-full p-5 flex items-center justify-between text-left" onclick="toggleFaq(this)">
+                        <span class="text-sm font-semibold pr-4">Can I use Expert Advisors (EAs)?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-brand-green flex-shrink-0 faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-0"><p class="text-sm text-brand-muted leading-relaxed pb-5">Yes, EAs are allowed as long as they don't use prohibited strategies like martingale without stop-loss, latency arbitrage, or tick scalping. Your EA must respect all standard trading rules.</p></div>
+                </div>
+                <div class="gradient-border overflow-hidden">
+                    <button class="faq-toggle w-full p-5 flex items-center justify-between text-left" onclick="toggleFaq(this)">
+                        <span class="text-sm font-semibold pr-4">What is the profit split?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-brand-green flex-shrink-0 faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-0"><p class="text-sm text-brand-muted leading-relaxed pb-5">Profit split goes up to 100% depending on your plan. You receive your first payout after completing the minimum trading days and reaching the profit target. Payouts are available monthly, biweekly, or weekly.</p></div>
+                </div>
+                <div class="gradient-border overflow-hidden">
+                    <button class="faq-toggle w-full p-5 flex items-center justify-between text-left" onclick="toggleFaq(this)">
+                        <span class="text-sm font-semibold pr-4">Do you offer refunds?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-brand-green flex-shrink-0 faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-0"><p class="text-sm text-brand-muted leading-relaxed pb-5">Yes, we offer a refund policy. If you request a refund before starting your challenge (no trades placed), you'll receive a full refund. Please refer to our Refund Policy page for complete details.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="relative z-10 border-t border-brand-border/50 py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3 icon-bounce cursor-pointer"><div class="w-8 h-8 rounded-lg bg-brand-green flex items-center justify-center"><i data-lucide="trending-up" class="w-4 h-4 text-brand-dark"></i></div><span class="text-lg font-bold">NPD <span class="text-brand-green">FIRM</span></span></div>
+                <div class="flex items-center gap-6 text-sm text-brand-muted">
+                    <a href="#" class="hover:text-white transition-colors hover:translate-y-[-2px] inline-block transition-transform">Terms</a>
+                    <a href="#" class="hover:text-white transition-colors hover:translate-y-[-2px] inline-block transition-transform">Privacy</a>
+                    <a href="#" class="hover:text-white transition-colors hover:translate-y-[-2px] inline-block transition-transform">Refund Policy</a>
+                    <a href="#" class="hover:text-white transition-colors hover:translate-y-[-2px] inline-block transition-transform">Contact</a>
+                </div>
+                <p class="text-xs text-brand-muted/60">© 2025 NPD Firm. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== LOGIN MODAL ===== -->
+    <div id="loginModal" class="fixed inset-0 z-[100] hidden">
+        <div class="modal-overlay absolute inset-0" onclick="hideLoginModal()"></div>
+        <div class="relative z-10 flex items-center justify-center min-h-screen p-4">
+            <div class="bg-brand-card border border-brand-border rounded-2xl w-full max-w-md shadow-2xl overflow-hidden modal-animate">
+                <div class="p-6 border-b border-brand-border flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-brand-green flex items-center justify-center"><i data-lucide="trending-up" class="w-4 h-4 text-brand-dark"></i></div>
+                        <span class="text-base font-bold">NPD <span class="text-brand-green">FIRM</span></span>
+                    </div>
+                    <button onclick="hideLoginModal()" class="w-8 h-8 rounded-lg bg-brand-dark flex items-center justify-center text-brand-muted hover:text-white hover:bg-red-500/20 hover:text-red-400 transition-all"><i data-lucide="x" class="w-4 h-4"></i></button>
+                </div>
+                <div class="p-6">
+                    <div class="flex gap-2 mb-6">
+                        <button class="login-tab active flex-1 py-2.5 text-sm font-semibold border border-brand-border rounded-xl text-center" onclick="switchLoginTab(this, 'login')">Login</button>
+                        <button class="login-tab flex-1 py-2.5 text-sm font-semibold border border-brand-border rounded-xl text-center text-brand-muted" onclick="switchLoginTab(this, 'register')">Register</button>
+                    </div>
+                    <!-- Login Form -->
+                    <div id="loginForm" class="space-y-4">
+                        <div><label class="text-xs text-brand-muted mb-1.5 block">Email Address</label><input type="email" placeholder="trader@example.com" class="input-field w-full px-4 py-3 rounded-xl bg-brand-dark text-sm text-white placeholder-brand-muted/50"></div>
+                        <div><label class="text-xs text-brand-muted mb-1.5 block">Password</label><input type="password" placeholder="••••••••" class="input-field w-full px-4 py-3 rounded-xl bg-brand-dark text-sm text-white placeholder-brand-muted/50"></div>
+                        <div class="flex items-center justify-between"><label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="w-4 h-4 rounded accent-brand-green"><span class="text-xs text-brand-muted">Remember me</span></label><a href="#" class="text-xs text-brand-green hover:text-brand-greenLight transition-colors">Forgot password?</a></div>
+                        <button onclick="handleLogin()" class="w-full py-3.5 text-sm font-bold text-brand-dark bg-brand-green rounded-xl hover:bg-brand-greenLight transition-all shimmer-btn ripple-container">Sign In</button>
+                        <div class="relative my-4"><div class="absolute inset-0 flex items-center"><div class="w-full border-t border-brand-border"></div></div><div class="relative flex justify-center"><span class="bg-brand-card px-3 text-xs text-brand-muted">or continue with</span></div></div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button class="py-2.5 text-sm font-medium text-brand-muted border border-brand-border rounded-xl hover:border-brand-green/30 hover:text-white transition-all flex items-center justify-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>Google</button>
+                            <button class="py-2.5 text-sm font-medium text-brand-muted border border-brand-border rounded-xl hover:border-brand-green/30 hover:text-white transition-all flex items-center justify-center gap-2"><i data-lucide="github" class="w-4 h-4"></i>GitHub</button>
+                        </div>
+                    </div>
+                    <!-- Register Form -->
+                    <div id="registerForm" class="space-y-4 hidden">
+                        <div><label class="text-xs text-brand-muted mb-1.5 block">Full Name</label><input type="text" placeholder="John Doe" class="input-field w-full px-4 py-3 rounded-xl bg-brand-dark text-sm text-white placeholder-brand-muted/50"></div>
+                        <div><label class="text-xs text-brand-muted mb-1.5 block">Email Address</label><input type="email" placeholder="trader@example.com" class="input-field w-full px-4 py-3 rounded-xl bg-brand-dark text-sm text-white placeholder-brand-muted/50"></div>
+                        <div><label class="text-xs text-brand-muted mb-1.5 block">Password</label><input type="password" placeholder="Min 8 characters" class="input-field w-full px-4 py-3 rounded-xl bg-brand-dark text-sm text-white placeholder-brand-muted/50"></div>
+                        <div><label class="text-xs text-brand-muted mb-1.5 block">Confirm Password</label><input type="password" placeholder="••••••••" class="input-field w-full px-4 py-3 rounded-xl bg-brand-dark text-sm text-white placeholder-brand-muted/50"></div>
+                        <label class="flex items-start gap-2 cursor-pointer"><input type="checkbox" class="w-4 h-4 rounded accent-brand-green mt-0.5"><span class="text-xs text-brand-muted">I agree to the <a href="#" class="text-brand-green hover:underline">Terms of Service</a> and <a href="#" class="text-brand-green hover:underline">Privacy Policy</a></span></label>
+                        <button onclick="handleRegister()" class="w-full py-3.5 text-sm font-bold text-brand-dark bg-brand-green rounded-xl hover:bg-brand-greenLight transition-all shimmer-btn ripple-container">Create Account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== GET FUNDED MODAL ===== -->
+    <div id="getFundedModal" class="fixed inset-0 z-[100] hidden">
+        <div class="modal-overlay absolute inset-0" onclick="hideGetFundedModal()"></div>
+        <div class="relative z-10 flex items-center justify-center min-h-screen p-4">
+            <div class="bg-brand-card border border-brand-border rounded-2xl w-full max-w-lg shadow-2xl overflow-hidden modal-animate">
+                <div class="p-6 border-b border-brand-border flex items-center justify-between">
+                    <div><p class="text-xs text-brand-muted uppercase tracking-wider">Get Started</p><h3 class="text-lg font-bold">Get <span class="text-brand-green">Funded</span> Today</h3></div>
+                    <button onclick="hideGetFundedModal()" class="w-8 h-8 rounded-lg bg-brand-dark flex items-center justify-center text-brand-muted hover:text-white hover:bg-red-500/20 hover:text-red-400 transition-all"><i data-lucide="x" class="w-4 h-4"></i></button>
+                </div>
+                <div class="p-6">
+                    <!-- Steps indicator -->
+                    <div class="flex items-center justify-between mb-8 px-4">
+                        <div class="funded-step active flex flex-col items-center gap-2" data-fstep="1">
+                            <div class="funded-step-num w-10 h-10 rounded-full bg-brand-dark border-2 border-brand-border flex items-center justify-center text-sm font-bold transition-all">1</div>
+                            <span class="text-[10px] text-brand-muted font-medium">Choose Plan</span>
+                        </div>
+                        <div class="funded-step-line h-0.5 flex-1 bg-brand-border mx-2"></div>
+                        <div class="funded-step flex flex-col items-center gap-2" data-fstep="2">
+                            <div class="funded-step-num w-10 h-10 rounded-full bg-brand-dark border-2 border-brand-border flex items-center justify-center text-sm font-bold transition-all">2</div>
+                            <span class="text-[10px] text-brand-muted font-medium">Details</span>
+                        </div>
+                        <div class="funded-step-line h-0.5 flex-1 bg-brand-border mx-2"></div>
+                        <div class="funded-step flex flex-col items-center gap-2" data-fstep="3">
+                            <div class="funded-step-num w-10 h-10 rounded-full bg-brand-dark border-2 border-brand-border flex items-center justify-center text-sm font-bold transition-all">3</div>
+                            <span class="text-[10px] text-brand-muted font-medium">Payment</span>
+                        </div>
+                        <div class="funded-step-line h-0.5 flex-1 bg-brand-border mx-2"></div>
+                        <div class="funded-step flex flex-col items-center gap-2" data-fstep="4">
+                            <div class="funded-step-num w-10 h-10 rounded-full bg-brand-dark border-2 border-brand-border flex items-center justify-center text-sm font-bold transition-all">4</div>
+                            <span class="text-[10px] text-brand-muted font-medium">Done</span>
+                        </div>
+                    </div>
+                    <!-- Step 1 -->
+                    <div class="funded-panel active" data-fpanel="1">
+                        <h4 class="text-base font-bold mb-4">Select Your Account Size</h4>
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <button class="funded-amount-btn py-3 rounded-xl border border-brand-border bg-brand-dark text-sm font-semibold hover:border-brand-green/30 transition-all text-center" data-famount="5000">$5K</button>
+                            <button class="funded-amount-btn py-3 rounded-xl border border-brand-border bg-brand-dark text-sm font-semibold hover:border-brand-green/30 transition-all text-center" data-famount="10000">$10K</button>
+                            <button class="funded-amount-btn py-3 rounded-xl border border-brand-border bg-brand-dark text-sm font-semibold hover:border-brand-green/30 transition-all text-center" data-famount="25000">$25K</button>
+                            <button class="funded-amount-btn py-3 rounded-xl border border-brand-border bg-brand-dark text-sm font-semibold hover:border-brand-green/30 transition-all text-center" data-famount="50000">$50K</button>
+                            <button class="funded-amount-btn py-3 rounded-xl border-2 border-brand-green bg-brand-green/10 text-brand-green text-sm font-semibold transition-all text-center relative" data-famount="100000">$100K<span class="absolute -top-2 left-1/2 -translate-x-1/2 popular-badge text-[8px] font-bold text-white px-2 py-0 rounded-full uppercase">Popular</span></button>
+                        </div>
+                        <div class="flex gap-3 mb-6">
+                            <button class="funded-step-btn flex-1 py-2.5 rounded-xl text-sm font-semibold border-2 border-brand-green bg-brand-green/10 text-brand-green" data-fs="1">1 Step</button>
+                            <button class="funded-step-btn flex-1 py-2.5 rounded-xl text-sm font-semibold border border-brand-border text-brand-muted hover:border-brand-green/30 transition-all" data-fs="2">2 Step</button>
+                        </div>
+                        <div class="bg-brand-dark rounded-xl p-4 border border-brand-border/50 mb-6 flex items-center justify-between">
+                            <span class="text-sm text-brand-muted">Selected Plan Price:</span>
+                            <span class="text-xl font-extrabold text-brand-green" id="fundedPrice">$549</span>
+                        </div>
+                        <button onclick="goFundedStep(2)" class="w-full py-3.5 text-sm font-bold text-brand-dark bg-brand-green rounded-xl hover:bg-brand-greenLight transition-all shimmer-btn ripple-container">Continue <i data-lucide="arrow-right" class="w-4 h-4 inline ml-1"></i></button>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="funded-panel" data-fpanel="2">
+                        <h4 class="text-base font-bold mb-4">Your Details</h4>
+                        <div class="space-y-4 mb-6">
+                            <div><label class="text-xs text-brand-muted mb-1.5 block">Full Name</label><input type="text" placeholder="John Doe" class="input-field w-full px-4 py-3 rounded-xl bg-brand-dark text-sm text-white placeholder-brand-muted/50"></div>
+                            <div><label class="text-xs text-brand-muted mb-1.5 block">Email Address</label><input type="email" placeholder="trader@example.com" class="input-field w-full px-4 py-3 rounded-xl bg-brand-dark text-sm text-white placeholder-brand-muted/50"></div>
+                            <div><label class="text-xs text-brand-muted mb-1.5 block">Phone Number</label><input type="tel" placeholder="+1 234 567 8900" class="input-field w-full px-4 py-3 rounded-xl bg-brand-dark text-sm text-white placeholder-brand-muted/50"></div>
+                            <div><label class="text-xs text-brand-muted mb-1.5 block">Country</label><select class="input-field w-full px-4 py-3 rounded-xl bg-brand-dark text-sm text-white appearance-none cursor-pointer"><option value="">Select Country</option><option>United States</option><option>United Kingdom</option><option>India</option><option>Germany</option><option>Australia</option><option>Canada</option><option>Other</option></select></div>
+                        </div>
+                        <div class="flex gap-3">
+                            <button onclick="goFundedStep(1)" class="flex-1 py-3.5 text-sm font-semibold text-brand-muted border border-brand-border rounded-xl hover:border-brand-green/30 transition-all">Back</button>
+                            <button onclick="goFundedStep(3)" class="flex-1 py-3.5 text-sm font-bold text-brand-dark bg-brand-green rounded-xl hover:bg-brand-greenLight transition-all shimmer-btn ripple-container">Continue</button>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="funded-panel" data-fpanel="3">
+                        <h4 class="text-base font-bold mb-4">Payment Method</h4>
+                        <div class="space-y-3 mb-6">
+                            <label class="flex items-center gap-4 p-4 rounded-xl border border-brand-border bg-brand-dark cursor-pointer hover:border-brand-green/30 transition-all">
+                                <input type="radio" name="payment" value="card" class="w-4 h-4 accent-brand-green" checked>
+                                <i data-lucide="credit-card" class="w-5 h-5 text-brand-muted"></i>
+                                <span class="text-sm font-medium">Credit / Debit Card</span>
+                            </label>
+                            <label class="flex items-center gap-4 p-4 rounded-xl border border-brand-border bg-brand-dark cursor-pointer hover:border-brand-green/30 transition-all">
+                                <input type="radio" name="payment" value="upi" class="w-4 h-4 accent-brand-green">
+                                <i data-lucide="smartphone" class="w-5 h-5 text-brand-muted"></i>
+                                <span class="text-sm font-medium">UPI Payment</span>
+                            </label>
+                            <label class="flex items-center gap-4 p-4 rounded-xl border border-brand-border bg-brand-dark cursor-pointer hover:border-brand-green/30 transition-all">
+                                <input type="radio" name="payment" value="bank" class="w-4 h-4 accent-brand-green">
+                                <i data-lucide="landmark" class="w-5 h-5 text-brand-muted"></i>
+                                <span class="text-sm font-medium">Bank Transfer</span>
+                            </label>
+                            <label class="flex items-center gap-4 p-4 rounded-xl border border-brand-border bg-brand-dark cursor-pointer hover:border-brand-green/30 transition-all">
+                                <input type="radio" name="payment" value="crypto" class="w-4 h-4 accent-brand-green">
+                                <i data-lucide="bitcoin" class="w-5 h-5 text-brand-muted"></i>
+                                <span class="text-sm font-medium">Cryptocurrency</span>
+                            </label>
+                        </div>
+                        <div class="bg-brand-dark rounded-xl p-4 border border-brand-border/50 mb-6 flex items-center justify-between">
+                            <span class="text-sm text-brand-muted">Total Amount:</span>
+                            <span class="text-xl font-extrabold text-brand-green" id="fundedTotalPrice">$549</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <button onclick="goFundedStep(2)" class="flex-1 py-3.5 text-sm font-semibold text-brand-muted border border-brand-border rounded-xl hover:border-brand-green/30 transition-all">Back</button>
+                            <button onclick="goFundedStep(4)" class="flex-1 py-3.5 text-sm font-bold text-brand-dark bg-brand-green rounded-xl hover:bg-brand-greenLight transition-all shimmer-btn ripple-container glow-green">Pay Now</button>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="funded-panel" data-fpanel="4">
+                        <div class="text-center py-6">
+                            <div class="w-20 h-20 rounded-full bg-brand-green/10 flex items-center justify-center mx-auto mb-6 glow-green">
+                                <i data-lucide="check-circle-2" class="w-10 h-10 text-brand-green"></i>
+                            </div>
+                            <h4 class="text-xl font-bold mb-2">Challenge Purchased!</h4>
+                            <p class="text-sm text-brand-muted mb-6 max-w-xs mx-auto">Your funded account challenge is ready. Check your email for MT5 credentials and login details.</p>
+                            <div class="bg-brand-dark rounded-xl p-4 border border-brand-border/50 mb-6 text-left">
+                                <div class="flex justify-between text-sm mb-2"><span class="text-brand-muted">Account Size</span><span class="font-semibold" id="fundedConfirmSize">$100,000</span></div>
+                                <div class="flex justify-between text-sm mb-2"><span class="text-brand-muted">Plan Type</span><span class="font-semibold" id="fundedConfirmStep">1 Step</span></div>
+                                <div class="flex justify-between text-sm"><span class="text-brand-muted">Status</span><span class="font-semibold text-brand-green">Active</span></div>
+                            </div>
+                            <button onclick="hideGetFundedModal()" class="w-full py-3.5 text-sm font-bold text-brand-dark bg-brand-green rounded-xl hover:bg-brand-greenLight transition-all shimmer-btn ripple-container">Go to Dashboard</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ACCOUNT MODAL ===== -->
+    <div id="accountModal" class="fixed inset-0 z-[100] hidden">
+        <div class="modal-overlay absolute inset-0" onclick="hideAccountModal()"></div>
+        <div class="relative z-10 flex items-center justify-center min-h-screen p-4">
+            <div class="bg-brand-card border border-brand-border rounded-2xl w-full max-w-lg shadow-2xl overflow-hidden modal-animate">
+                <div class="p-6 border-b border-brand-border flex items-center justify-between"><div><p class="text-sm text-brand-muted">Welcome back</p><h3 class="text-lg font-bold">Hello, Okumus</h3></div><button onclick="hideAccountModal()" class="w-8 h-8 rounded-lg bg-brand-dark flex items-center justify-center text-brand-muted hover:text-white hover:bg-red-500/20 hover:text-red-400 transition-all"><i data-lucide="x" class="w-4 h-4"></i></button></div>
+                <div class="p-6 space-y-6">
+                    <div class="bg-brand-dark rounded-xl p-5 border border-brand-border/50"><div class="flex items-center justify-between mb-3"><span class="text-sm text-brand-muted">Account Balance</span><span class="text-xs font-semibold px-2 py-0.5 rounded bg-red-500/20 text-red-400">Disabled</span></div><div class="text-3xl font-extrabold text-brand-green mb-1">$5,000.00</div><div class="text-xs text-brand-muted">MT5 1012963</div></div>
+                    <div><h4 class="text-sm font-semibold mb-4">Trade Performance Meter</h4><div class="flex items-center gap-6"><div class="relative w-24 h-24 flex-shrink-0"><svg class="w-24 h-24 -rotate-90" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" stroke="#1e1e2e" stroke-width="8" fill="none"/><circle cx="50" cy="50" r="45" stroke="url(#meterGrad)" stroke-width="8" fill="none" stroke-linecap="round" class="meter-circle"/><defs><linearGradient id="meterGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#00C853"/><stop offset="100%" stop-color="#00ff88"/></linearGradient></defs></svg><div class="absolute inset-0 flex items-center justify-center"><span class="text-sm font-bold">70%</span></div></div><div class="space-y-2 text-sm"><div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-brand-green"></div><span class="text-brand-muted">Target: <span class="text-white font-medium">10%</span></span></div><div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-yellow-400"></div><span class="text-brand-muted">Achieved: <span class="text-white font-medium">7%</span></span></div><div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-brand-border"></div><span class="text-brand-muted">Remaining: <span class="text-white font-medium">3%</span></span></div></div></div></div>
+                    <div><h4 class="text-sm font-semibold mb-4">Account Overview</h4><div class="bg-brand-dark rounded-xl p-4 border border-brand-border/50"><svg class="w-full h-32" viewBox="0 0 400 120" preserveAspectRatio="none"><line x1="0" y1="30" x2="400" y2="30" stroke="#1e1e2e" stroke-width="0.5"/><line x1="0" y1="60" x2="400" y2="60" stroke="#1e1e2e" stroke-width="0.5"/><line x1="0" y1="90" x2="400" y2="90" stroke="#1e1e2e" stroke-width="0.5"/><path d="M0 90 L40 85 L80 80 L120 75 L160 65 L200 60 L240 50 L280 45 L320 40 L360 35 L400 30 L400 120 L0 120Z" fill="url(#chartFill)" opacity="0.3"/><path d="M0 90 L40 85 L80 80 L120 75 L160 65 L200 60 L240 50 L280 45 L320 40 L360 35 L400 30" stroke="url(#chartLine)" stroke-width="2" fill="none" class="chart-line" stroke-linecap="round" stroke-linejoin="round"/><circle cx="400" cy="30" r="4" fill="#00C853" opacity="0.8"><animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/></circle><defs><linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#00C853" stop-opacity="0.3"/><stop offset="100%" stop-color="#00C853" stop-opacity="0"/></linearGradient><linearGradient id="chartLine" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#00C853"/><stop offset="100%" stop-color="#00ff88"/></linearGradient></defs></svg><div class="flex justify-between mt-2 text-[10px] text-brand-muted/60"><span>Day 1</span><span>Day 5</span><span>Day 10</span><span>Day 15</span></div></div></div>
+                    <div class="grid grid-cols-2 gap-3"><div class="bg-brand-dark rounded-xl p-3 border border-brand-border/50"><div class="text-[10px] text-brand-muted uppercase tracking-wider">Equity</div><div class="text-sm font-bold mt-0.5">$5,350.00</div></div><div class="bg-brand-dark rounded-xl p-3 border border-brand-border/50"><div class="text-[10px] text-brand-muted uppercase tracking-wider">Profit</div><div class="text-sm font-bold mt-0.5 text-brand-green">+$350.00</div></div><div class="bg-brand-dark rounded-xl p-3 border border-brand-border/50"><div class="text-[10px] text-brand-muted uppercase tracking-wider">Daily Loss</div><div class="text-sm font-bold mt-0.5 text-yellow-400">$150 / $150</div></div><div class="bg-brand-dark rounded-xl p-3 border border-brand-border/50"><div class="text-[10px] text-brand-muted uppercase tracking-wider">Max Loss</div><div class="text-sm font-bold mt-0.5 text-red-400">$300 / $300</div></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div id="toastContainer" class="fixed top-24 right-6 z-[200] flex flex-col gap-3 pointer-events-none"></div>
+
+    <!-- SCRIPTS -->
+    <script>
+        lucide.createIcons();
+
+        function toggleMobileMenu(){document.getElementById('mobileMenu').classList.toggle('hidden')}
+
+        const planData={'5000':{display:'$5,000',original:'$79',price:'$49'},'10000':{display:'$10,000',original:'$149',price:'$99'},'25000':{display:'$25,000',original:'$299',price:'$199'},'50000':{display:'$50,000',original:'$449',price:'$349'},'100000':{display:'$100,000',original:'$649',price:'$549'}};
+        const planData2Step={'5000':{display:'$5,000',original:'$99',price:'$69'},'10000':{display:'$10,000',original:'$179',price:'$129'},'25000':{display:'$25,000',original:'$349',price:'$249'},'50000':{display:'$50,000',original:'$549',price:'$429'},'100000':{display:'$100,000',original:'$799',price:'$649'}};
+        let currentStep=1;
+
+        document.querySelectorAll('.plan-amount').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.plan-amount').forEach(b=>{b.classList.remove('border-2','border-brand-green','bg-brand-green/10','text-brand-green');b.classList.add('border','border-brand-border','bg-brand-card');const badge=b.querySelector('.popular-badge');if(badge)badge.remove()});btn.classList.remove('border','border-brand-border','bg-brand-card');btn.classList.add('border-2','border-brand-green','bg-brand-green/10','text-brand-green');const amount=btn.dataset.amount;const data=currentStep===1?planData[amount]:planData2Step[amount];if(data){animateText('planAmountTitle',data.display);animateText('planOriginalPrice',data.original);animateText('planPrice',data.price)}if(amount==='100000'){if(!btn.querySelector('.popular-badge')){const span=document.createElement('span');span.className='absolute -top-3 left-1/2 -translate-x-1/2 popular-badge text-[10px] font-bold text-white px-3 py-0.5 rounded-full uppercase';span.textContent='Most Popular';span.style.animation='fadeInUp .3s ease-out';btn.classList.add('relative');btn.appendChild(span)}}})});
+
+        document.querySelectorAll('.step-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.step-btn').forEach(b=>{b.classList.remove('border-2','border-brand-green','bg-brand-green/10','text-brand-green');b.classList.add('border','border-brand-border','text-brand-muted')});btn.classList.remove('border','border-brand-border','text-brand-muted');btn.classList.add('border-2','border-brand-green','bg-brand-green/10','text-brand-green');currentStep=parseInt(btn.dataset.step);document.querySelector('.text-xs.font-semibold.text-brand-green.uppercase').textContent=currentStep+' Step Plan';const activeAmount=document.querySelector('.plan-amount.border-brand-green, .plan-amount.text-brand-green');const amount=activeAmount?activeAmount.dataset.amount:'100000';const data=currentStep===1?planData[amount]:planData2Step[amount];if(data){animateText('planAmountTitle',data.display);animateText('planOriginalPrice',data.original);animateText('planPrice',data.price)}})});
+
+        function animateText(id,newText){const el=document.getElementById(id);el.style.transition='opacity .15s, transform .15s';el.style.opacity='0';el.style.transform='translateY(-8px)';setTimeout(()=>{el.textContent=newText;el.style.transform='translateY(8px)';setTimeout(()=>{el.style.opacity='1';el.style.transform='translateY(0)'},30)},150)}
+
+        function showAccountModal(){document.getElementById('accountModal').classList.remove('hidden');document.body.style.overflow='hidden';lucide.createIcons()}
+        function hideAccountModal(){document.getElementById('accountModal').classList.add('hidden');document.body.style.overflow=''}
+
+        // LOGIN MODAL
+        function showLoginModal(){document.getElementById('loginModal').classList.remove('hidden');document.body.style.overflow='hidden';lucide.createIcons()}
+        function hideLoginModal(){document.getElementById('loginModal').classList.add('hidden');document.body.style.overflow=''}
+        function switchLoginTab(btn,type){document.querySelectorAll('.login-tab').forEach(t=>{t.classList.remove('active');t.classList.add('text-brand-muted')});btn.classList.add('active');btn.classList.remove('text-brand-muted');document.getElementById('loginForm').classList.toggle('hidden',type!=='login');document.getElementById('registerForm').classList.toggle('hidden',type!=='register');lucide.createIcons()}
+        function handleLogin(){hideLoginModal();showToast('Welcome back! Redirecting to dashboard...','success')}
+        function handleRegister(){hideLoginModal();showToast('Account created! Please check your email.','success')}
+
+        // GET FUNDED MODAL
+        let fundedAmount='100000',fundedStepType=1;
+        const fundedPrices={'5000':{s1:'$49',s2:'$69'},'10000':{s1:'$99',s2:'$129'},'25000':{s1:'$199',s2:'$249'},'50000':{s1:'$349',s2:'$429'},'100000':{s1:'$549',s2:'$649'}};
+        let fundedCurrentStep=1;
+
+        function showGetFundedModal(){fundedCurrentStep=1;updateFundedSteps();document.getElementById('getFundedModal').classList.remove('hidden');document.body.style.overflow='hidden';updateFundedPrice();lucide.createIcons()}
+        function hideGetFundedModal(){document.getElementById('getFundedModal').classList.add('hidden');document.body.style.overflow=''}
+
+        document.querySelectorAll('.funded-amount-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.funded-amount-btn').forEach(b=>{b.classList.remove('border-2','border-brand-green','bg-brand-green/10','text-brand-green');b.classList.add('border','border-brand-border','bg-brand-dark');const badge=b.querySelector('.popular-badge');if(badge)badge.remove()});btn.classList.remove('border','border-brand-border','bg-brand-dark');btn.classList.add('border-2','border-brand-green','bg-brand-green/10','text-brand-green');fundedAmount=btn.dataset.famount;if(fundedAmount==='100000'&&!btn.querySelector('.popular-badge')){const s=document.createElement('span');s.className='absolute -top-2 left-1/2 -translate-x-1/2 popular-badge text-[8px] font-bold text-white px-2 py-0 rounded-full uppercase';s.textContent='Popular';btn.style.position='relative';btn.appendChild(s)}updateFundedPrice()})});
+
+        document.querySelectorAll('.funded-step-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.funded-step-btn').forEach(b=>{b.classList.remove('border-2','border-brand-green','bg-brand-green/10','text-brand-green');b.classList.add('border','border-brand-border','text-brand-muted')});btn.classList.remove('border','border-brand-border','text-brand-muted');btn.classList.add('border-2','border-brand-green','bg-brand-green/10','text-brand-green');fundedStepType=parseInt(btn.dataset.fs);updateFundedPrice()})});
+
+        function updateFundedPrice(){const p=fundedPrices[fundedAmount];const price=fundedStepType===1?p.s1:p.s2;document.getElementById('fundedPrice').textContent=price;document.getElementById('fundedTotalPrice').textContent=price}
+
+        function goFundedStep(step){fundedCurrentStep=step;updateFundedSteps();if(step===4){const sizeMap={'5000':'$5,000','10000':'$10,000','25000':'$25,000','50000':'$50,000','100000':'$100,000'};document.getElementById('fundedConfirmSize').textContent=sizeMap[fundedAmount];document.getElementById('fundedConfirmStep').textContent=fundedStepType+' Step'}lucide.createIcons()}
+
+        function updateFundedSteps(){document.querySelectorAll('.funded-step').forEach((s,i)=>{const num=i+1;const line=s.nextElementSibling;if(num<=fundedCurrentStep){s.classList.add('active');if(line&&line.classList.contains('funded-step-line'))line.classList.add('active')}else{s.classList.remove('active');if(line&&line.classList.contains('funded-step-line'))line.classList.remove('active')}});document.querySelectorAll('.funded-panel').forEach(p=>{p.classList.toggle('active',parseInt(p.dataset.fpanel)===fundedCurrentStep)})}
+
+        // FAQ TOGGLE
+        function toggleFaq(btn){const answer=btn.nextElementSibling;const chevron=btn.querySelector('.faq-chevron');const isOpen=answer.classList.contains('open');document.querySelectorAll('.faq-answer').forEach(a=>a.classList.remove('open'));document.querySelectorAll('.faq-chevron').forEach(c=>c.classList.remove('open'));if(!isOpen){answer.classList.add('open');chevron.classList.add('open')}}
+
+        // TOAST
+        function showToast(msg,type='success'){const container=document.getElementById('toastContainer');const toast=document.createElement('div');toast.className=`toast pointer-events-auto flex items-center gap-3 px-5 py-3.5 rounded-xl border ${type==='success'?'bg-brand-green/10 border-brand-green/30 text-brand-green':'bg-red-500/10 border-red-500/30 text-red-400'} text-sm font-medium shadow-lg backdrop-blur-xl`;const icon=type==='success'?'check-circle':'alert-circle';toast.innerHTML=`<i data-lucide="${icon}" class="w-4 h-4 flex-shrink-0"></i><span>${msg}</span>`;container.appendChild(toast);lucide.createIcons();setTimeout(()=>toast.remove(),3000)}
+
+        document.addEventListener('keydown',(e)=>{if(e.key==='Escape'){hideAccountModal();hideLoginModal();hideGetFundedModal()}});
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){const href=this.getAttribute('href');if(href!=='#'){e.preventDefault();const target=document.querySelector(href);if(target){target.scrollIntoView({behavior:'smooth',block:'start'});document.getElementById('mobileMenu').classList.add('hidden')}}})});
+
+        // ANIMATIONS
+        document.querySelectorAll('.magnetic-btn').forEach(btn=>{btn.addEventListener('mousemove',(e)=>{const rect=btn.getBoundingClientRect();const x=e.clientX-rect.left-rect.width/2;const y=e.clientY-rect.top-rect.height/2;btn.style.transform=`translate(${x*.15}px, ${y*.15}px)`});btn.addEventListener('mouseleave',()=>{btn.style.transform='translate(0, 0)'})});
+
+        document.querySelectorAll('.ripple-container').forEach(container=>{container.addEventListener('click',function(e){const ripple=document.createElement('span');ripple.classList.add('ripple-effect');const rect=this.getBoundingClientRect();const size=Math.max(rect.width,rect.height);ripple.style.width=ripple.style.height=size+'px';ripple.style.left=(e.clientX-rect.left-size/2)+'px';ripple.style.top=(e.clientY-rect.top-size/2)+'px';this.appendChild(ripple);setTimeout(()=>ripple.remove(),700)})});
+
+        document.querySelectorAll('[data-stagger]').forEach(parent=>{const delay=parseInt(parent.dataset.stagger)||100;parent.querySelectorAll(':scope > *').forEach((child,i)=>{child.classList.add('stagger-child');child.style.transitionDelay=(i*delay)+'ms'})});
+
+        const animObserver=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');entry.target.querySelectorAll('.stagger-child').forEach((child,i)=>{setTimeout(()=>child.classList.add('visible'),i*100)});entry.target.querySelectorAll('[data-count]').forEach(el=>animateCounter(el))}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el=>animObserver.observe(el));
+        document.querySelectorAll('.gradient-border, .compare-row').forEach(el=>{if(!el.closest('.animate-on-scroll.visible')&&!el.closest('.animate-on-scroll')){el.classList.add('animate-on-scroll');animObserver.observe(el)}});
+
+        function animateCounter(el){if(el.dataset.counted)return;el.dataset.counted='true';const target=parseFloat(el.dataset.count);const suffix=el.dataset.suffix||'';const duration=1200;const start=performance.now();function update(now){const elapsed=now-start;const progress=Math.min(elapsed/duration,1);const eased=1-Math.pow(1-progress,3);const current=Math.round(eased*target);el.textContent=current+suffix;el.classList.add('counter-animate');if(progress<1)requestAnimationFrame(update)}requestAnimationFrame(update)}
+
+        const brainSvg=document.getElementById('brainSvg');const brainWrapper=document.getElementById('brainWrapper');
+        if(brainSvg&&brainWrapper){const container=brainWrapper.closest('.gradient-border');if(container){container.addEventListener('mousemove',(e)=>{const rect=container.getBoundingClientRect();const x=(e.clientX-rect.left)/rect.width-0.5;const y=(e.clientY-rect.top)/rect.height-0.5;brainSvg.style.transition='transform .15s ease-out';brainSvg.style.transform=`translate(${x*25}px, ${y*25}px) rotateY(${x*10}deg) rotateX(${-y*10}deg)`});container.addEventListener('mouseleave',()=>{brainSvg.style.transition='transform .5s ease';brainSvg.style.transform='translate(0, 0) rotateY(0) rotateX(0)'})}}
+
+        const heroSection=document.getElementById('home');
+        if(heroSection){for(let i=0;i<20;i++){const p=document.createElement('div');p.classList.add('particle','particle-float');p.style.left=Math.random()*100+'%';p.style.top=Math.random()*100+'%';p.style.setProperty('--delay',(Math.random()*4)+'s');p.style.setProperty('--dur',(3+Math.random()*4)+'s');p.style.opacity=(0.15+Math.random()*0.35);const size=(2+Math.random()*3)+'px';p.style.width=size;p.style.height=size;p.style.background=Math.random()>0.5?'rgba(0,200,83,0.5)':'rgba(0,255,136,0.4)';p.style.boxShadow=`0 0 ${4+Math.random()*6}px ${p.style.background}`;heroSection.style.position='relative';heroSection.appendChild(p)}}
+
+        document.querySelectorAll('.fade-in-up, .fade-in-up-delay-1, .fade-in-up-delay-2, .fade-in-up-delay-3').forEach(el=>{el.style.animationPlayState='paused';const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.animationPlayState='running';obs.unobserve(e.target)}})},{threshold:0.3});obs.observe(el)});
+
+        const nav=document.querySelector('nav');
+        window.addEventListener('scroll',()=>{if(window.scrollY>50)nav.style.borderBottomColor='rgba(0,200,83,0.15)';else nav.style.borderBottomColor=''},{passive:true});
+
+        const sections=document.querySelectorAll('section[id]');
+        window.addEventListener('scroll',()=>{let current='';sections.forEach(section=>{const top=section.offsetTop-120;if(window.scrollY>=top)current=section.id});document.querySelectorAll('nav .nav-link').forEach(link=>{link.classList.remove('active','text-white');link.classList.add('text-brand-muted');if(link.getAttribute('href')==='#'+current){link.classList.add('active','text-white');link.classList.remove('text-brand-muted')}})},{passive:true});
+
+        setTimeout(()=>{document.querySelectorAll('#home [data-count]').forEach(el=>animateCounter(el))},800);
+    </script>
+</body>
+</html>
